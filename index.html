@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Of Sady..</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Nav-ber -->
+    <nav
+      class="flex flex-col space-y-6 sm:space-y-0 sm:flex-row items-center justify-center max-w-6xl m-auto p-1 sm:items-center sm:justify-between"
+    >
+      <div class="flex items-center justify-center sm:justify-start gap-2">
+        <img src="./images/car-icon.png" alt="" width="8%" />
+        <h1 class="flex text-xl text-gray-500">
+          <span class="text-black">Touring</span>Cars
+        </h1>
+      </div>
+      <ul class="flex flex-col sm:flex-row text-center gap-8 text-lg">
+        <li class="cursor-pointer">Home</li>
+        <li class="cursor-pointer">Inventory</li>
+        <li class="cursor-pointer">New Cars</li>
+        <li class="cursor-pointer">Compare Models</li>
+      </ul>
+    </nav>
+
+    <!-- first-section -->
+    <section
+      class="max-w-6xl mx-4 sm:mx-auto m-auto mt-8 relative flex flex-col justify-between sm:flex-row items-center h-[500px]"
+    >
+      <div class="space-y-4">
+        <h1 class="text-6xl font-semibold">
+          Find the perfect <br class="hidden sm:inline-block" />
+          car for your <br class="hidden sm:inline-block" />
+          next journey.
+        </h1>
+        <button
+          class="bg-black text-white py-2 px-6 rounded-full cursor-pointer mt-4"
+        >
+          See your dream car here >
+        </button>
+      </div>
+      <div class="left-140">
+        <img class="w-[600px]" src="./images/car-img.png" alt="" />
+      </div>
+    </section>
+
+    <div class="max-w-6xl m-auto flex justify-center mt-6">
+      <img src="./images/keyboard_arrow_down.png" alt="" />
+    </div>
+
+    <!-- Model-section -->
+    <section class="max-w-6xl m-auto mt-12 mb-10 py-12 space-y-7">
+      <h1 class="pl-2 text-2xl text-center sm:text-start font-semibold">
+        Models
+      </h1>
+      <div class="flex flex-col sm:flex-row items-center gap-10">
+        <div>
+          <img
+            class="hover:border rounded-3xl hover:border-yellow-200"
+            src="./images/car-1.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="hover:border rounded-3xl hover:border-yellow-200"
+            src="./images/car-2.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="hover:border rounded-3xl hover:border-yellow-200"
+            src="./images/car-3.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- input-section -->
+    <section class="max-w-6xl p-1 mx-2 sm:mx-auto m-auto mb-26">
+
+      <div  class="space-y-2">
+        <h1 class="text-3xl font-semibold">Are you looking for <br> a specific model?</h1>
+        <p class="text-lg">Leave your contact so our team can get in touch with you!</p>
+      </div>
+
+      <div class="mt-10 border rounded-md pt-6 sm:pt-0 sm:px-2 px-4 p-4 sm:p-0 sm:h-[240px] flex flex-col gap-4 justify-center">
+
+      <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-around">
+          <input class="border outline-none px-2 py-2 rounded-sm" type="text" placeholder="Models">
+        <input class="border outline-none px-2 py-2 rounded-sm" type="text" placeholder="Name">
+        <input class="border outline-none px-2 py-2 rounded-sm" type="email" placeholder="E-mail">
+        <input class="border outline-none px-2 py-2 rounded-sm" type="number" placeholder="Number">
+        <input class="border py-3 px-12 bg-black text-white rounded-md cursor-pointer" type="submit" value="Submit">
+      </div>
+      <div class="flex gap-2 mt-6  pl-4">
+        <input class="" type="checkbox" name="" id="">
+        <p>In accordance with the LGPD, I agree to provide the above information so that Touring Cars may contact me to present its services. Your name, email, and phone number will be used in accordance with our Privacy Policy.</p>
+      </div>
+
+      </div>
+    </section>
+
+    <!-- Weekly highlight -->
+     <section class="max-w-6xl m-auto p-1 mb-20 space-y-10 mx-2 sm:mx-1 sm:mx-auto">
+
+      <h1 class="text-2xl font-semibold pl-1">Weekly Highlight</h1>
+    
+      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 justify-between ">
+        <img class="w-[740px] h-[400px]" src="./images/weekly.png" alt="">
+        <img class="w-[360px]  h-[400px]" src="./images/weekly-2.png" alt="">
+      </div>
+
+
+
+     </section>
+
+     <!-- about-style -->
+      <section class="max-w-6xl m-auto p-1 mt-10  space-y-8 mb-20">
+
+        <h1 class="text-2xl text-center sm:text-start pl-2 font-semibold">Latest Sales</h1>
+
+        <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row items-center gap-6 justify-between">
+
+         <div> <img src="./images/about-1.png" alt=""></div>
+         <div> <img src="./images/about-2.png" alt=""></div>
+   <div>       <img src="./images/about-3.png" alt=""></div>
+
+        </div>
+
+      </section>
+
+
+
+  </body>
+</html>
