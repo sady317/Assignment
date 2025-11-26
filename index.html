@@ -12,6 +12,10 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- DaisyUi Link -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <!-- Nav-ber -->
@@ -43,6 +47,7 @@
           next journey.
         </h1>
         <button
+        id="dreamsCar"
           class="bg-black text-white py-2 px-6 rounded-full cursor-pointer mt-4"
         >
           See your dream car here >
@@ -58,32 +63,42 @@
     </div>
 
     <!-- Model-section -->
-    <section class="max-w-6xl m-auto mt-12 mb-10 py-12 space-y-7">
+    <section id="modelSec" class="max-w-6xl m-auto mt-12 mb-10 py-12 space-y-7">
       <h1 class="pl-2 text-2xl text-center sm:text-start font-semibold">
         Models
       </h1>
-      <div class="flex mx-6 sm:mx-0 flex-col sm:flex-row items-center gap-10">
-        <div>
-          <img
-            class="hover:border rounded-3xl hover:border-yellow-200"
+      <div     id="modelInfo" class="flex mx-6 sm:mx-0 flex-col sm:flex-row items-center gap-10">
+
+        <div onclick="getdataNamePrice(this)"  data-name="Toyota Supra" data-price="45,000$">
+        
+          <img 
+          id="first"
+            class="carImg rounded-3xl hover:border-yellow-200"
             src="./images/car-1.png"
             alt=""
           />
         </div>
-        <div>
-          <img
-            class="hover:border rounded-3xl hover:border-yellow-200"
+
+        <div onclick="getdataNamePrice(this)"    data-name="Audi RS5" 
+             data-price="65,000$">
+          <img 
+          id="second"
+            class="carImg rounded-3xl hover:border-yellow-200"
             src="./images/car-2.png"
             alt=""
           />
         </div>
-        <div>
-          <img
-            class="hover:border rounded-3xl hover:border-yellow-200"
+
+        <div onclick="getdataNamePrice(this)"      data-name="BMW M3" 
+     data-price="50,000$">
+          <img 
+       id="third"
+            class="carImg rounded-3xl hover:border-yellow-200"
             src="./images/car-3.png"
             alt=""
           />
         </div>
+
       </div>
     </section>
 
@@ -104,11 +119,13 @@
       >
         <div class="flex flex-col gap-4 sm:gap-0 sm:flex-row justify-around">
           <input
+          id="modelsInt"
             class="border outline-none px-2 py-2 rounded-sm"
             type="text"
             placeholder="Models"
           />
           <input
+          id="nameInput"
             class="border outline-none px-2 py-2 rounded-sm"
             type="text"
             placeholder="Name"
@@ -124,6 +141,8 @@
             placeholder="Number"
           />
           <input
+          id="submitBtn"
+          onclick="getInputValue()"
             class="border py-3 px-12 bg-black text-white rounded-md cursor-pointer"
             type="submit"
             value="Submit"
@@ -153,7 +172,7 @@
         class="flex flex-col sm:flex-row space-y-4 mx-2 sm:mx-0 sm:space-y-0 justify-between"
       >
         <img
-          class="sm:w-[740px] sm:h-[400px]"
+          class="sm:w-[740px] hover:scale-102 sm:h-[400px]"
           src="./images/weekly.png"
           alt=""
         />
@@ -181,7 +200,7 @@
     </section>
 
     <!-- footer-ber -->
-    <footer class="max-w-7xl m-auto py-16 bg-red-00  p-2 border-t-1 border-gray-300 space-y-12 sm:space-y-0 flex flex-col sm:flex-row  justify-between items-center">
+    <footer id="footerSec" class="max-w-7xl m-auto py-16 bg-red-00  p-2 border-t-1 border-gray-300 space-y-12 sm:space-y-0 flex flex-col sm:flex-row  justify-between items-center">
 
       <div class="space-y-3 text-lg">
         <div class="flex items-center justify-center  sm:justify-start gap-2">
@@ -210,8 +229,27 @@
         <h1>Sign Up</h1>
         <p>Enter your email to receive the <br> latest news from Touring Cars.</p>
         <div class="space-x-1">
-          <input class="border outline-none px-2 py-1 placeholder:text-gray-400 rounded-md" type="email" placeholder="E-mail">
-          <i class=" border px-3 py-2 pr-7 bg-black text-white rounded-sm border-none  cursor-pointer fa-solid fa-arrow-right"></i>
+          <input oninput="getinputData()" id="emailInt" class="border outline-none px-2 py-1 placeholder:text-gray-400 rounded-md" type="email" placeholder="E-mail">
+          <button  id="applyBtn" onclick="my_modal_1.showModal();"class="bg-red-400 text-white px-2 py-1 cursor-pointer rounded-sm" >
+            Buy Now
+          
+          </button>
+          <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" >open modal</button> -->
+<dialog  id="my_modal_1" class="modal">
+  <div class="modal-box flex justify-center flex-col items-center space-y-4 ">
+    <h3 class="text-lg font-bold">Hello!</h3>
+    <h1 class="text-4xl">Congratulation</h1>
+    <p class="">You purchase the product</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-red-400 text-xl text-white px-4 py-2 cursor-pointer rounded-sm">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
         </div>
       </div>
 
@@ -220,4 +258,5 @@
     <div class="text-center mb-2 sm:mb-4 sm:mt-8"><p>©️ 2025 Touring Cars. All rights reserved.</p></div>
 
   </body>
+  <script src="./index.js"></script>
 </html>
