@@ -137,12 +137,16 @@ applyBtnEl.style.cursor = "not-allowed";
 
  const modelsIntEl=document.getElementById("modelsInt")
  const nameInputEl=document.getElementById("nameInput")
+ const inputSectionEl=document.getElementById("inputSection")
 
 firstEl.addEventListener("click",()=>{
   firstEl.style.position="relative"
   firstEl.style.width="600px"
   modelsIntEl.value=1
   nameInputEl.value="Toyota Supra"
+  inputSectionEl.scrollIntoView({
+    behavior:"smooth"
+  })
 })
 
 secondEl.addEventListener("click",()=>{
@@ -150,6 +154,9 @@ secondEl.addEventListener("click",()=>{
   secondEl.style.width="600px"
   modelsIntEl.value=2
   nameInputEl.value="Audi RS5" 
+    inputSectionEl.scrollIntoView({
+    behavior:"smooth"
+  })
 
 })
 thirdEl.addEventListener("click",()=>{
@@ -157,6 +164,9 @@ thirdEl.addEventListener("click",()=>{
   thirdEl.style.width="600px"
   modelsIntEl.value=3
   nameInputEl.value="BMW M3" 
+    inputSectionEl.scrollIntoView({
+    behavior:"smooth"
+  })
 
 })
 
